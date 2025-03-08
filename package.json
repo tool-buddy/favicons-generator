@@ -1,0 +1,66 @@
+{
+  "name": "favicons-generator",
+  "version": "1.0.0",
+  "description": "A simple Node.js tool that generates all standard web icons and favicons from a single source image.",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": {
+    "generate-favicons": "./dist/bin/generate-favicons.js"
+  },
+  "files": [
+    "dist/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node dist/bin/generate-favicons.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint --config eslint.config.js .",
+    "lint:fix": "eslint --config eslint.config.js . --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"bin/**/*.ts\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm run format && npm run build",
+    "docs": "typedoc"
+  },
+  "keywords": [
+    "favicon",
+    "icon",
+    "generator",
+    "pwa",
+    "web-app",
+    "apple-touch-icon",
+    "android-icon",
+    "microsoft-tile"
+  ],
+  "author": "Akram El Hadri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tool-buddy/favicons-generator.git"
+  },
+  "homepage": "https://github.com/tool-buddy/favicons-generator#readme",
+  "bugs": {
+    "url": "https://github.com/tool-buddy/favicons-generator/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "png-to-ico": "^2.1.8",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/sharp": "^0.31.1",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.27.9",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "entryPoints": [
+    "src/index.ts",
+    "src/types/app.ts",
+    "src/types/common.ts",
+    "src/types/generators.ts"
+  ],
+  "out": "docs",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "readme": "README.md",
+  "name": "favicons-generator",
+  "githubPages": true
+}
