@@ -66,9 +66,13 @@ npx generate-favicons logo.png "My Application"
 npx generate-favicons --help
 ```
 
-### Via Node.js API
+### API
 
-You can also use the library programmatically:
+#### Documentation
+
+The API Reference is available [here](https://tool-buddy.github.io/favicons-generator/modules.html).
+
+#### Usage Example
 
 ```javascript
 import { generateIcons } from 'favicons-generator';
